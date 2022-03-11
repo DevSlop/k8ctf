@@ -1,3 +1,7 @@
+<p align="center">
+<img src="screenshots/k8ctf_logo.png" alt="Devslop_K8_ctf_logo" width="300"/>
+</p>
+
 This workshop/CTF is part of the [OWASP DevSlop](https://www.devslop.co) project was hosted at the 2021 Diana Initiative CTF.  It is intended to be beginner-friendly CTF on a lightweight, low-cost Kubernetes setup, that you can run in your own AWS account. Its format is a little different than normal CTF's. The goal is to introduce you gently to Kubernetes concepts (learning exercises) and then to break the security of something (breaker exercises) and finally to fix the thing you just broke (builder exercises).  We hope that this format helps you learn the introductory concepts well enough to understand why you are able to violate security and then solve the underlying security problem.
 
 Big shout out to the Kops team. Without Kops this would have made individualized Kubnernetes clusters near impossible to be both low cost and light weight.
