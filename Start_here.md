@@ -41,23 +41,23 @@ curl -LO https://github.com/kubernetes/kops/releases/download/$(curl -s https://
 
 Make the kops binary executable.
 
-```shell
+```
 chmod +x kops-darwin-amd64
 ```
 
 Move the kops binary in to your PATH.
 
-```shell
+```
 sudo mv kops-darwin-amd64 /usr/local/bin/kops
 ```
 
 You can also install kops using [Homebrew](https://brew.sh/).
 
-```shell
+```
 brew update && brew install kops
 ```
 
-Validate this by running
+Validate this by running:
 ```
 kops version
 ```
@@ -67,9 +67,13 @@ In order to build our cluster, we'll need to interact with AWS using its CLI.
 
 a. Create a [Free Tier account](https://aws.amazon.com/free/), or use an existing one.
 b. Create an [IAM user](https://console.aws.amazon.com/iamv2/home?#/users). You will need to navigate to the IAM section of the AWS Console and select “Users” from the Left side menu then select “Add User”, as pictured below.
-![[Pasted image 20220307192609.png]]
+
+![AWS Account](/screenshots/aws_account.png)
+
 c. On the following screen, enter a username for the account and give the account programmatic access, which will generate keys for the user. We’ll be using these keys to configure a profile in the AWS command line interface. The image below shows the author creating a user named “k8_ctf” and giving the user programmatic access.
-![[Screen Shot 2022-03-07 at 7.29.56 PM.png]]
+
+![AWS Permissions](/screenshots/aws_permissions.png)
+
 d. Next we need to assign permissions to our user "k8_ctf" 
 
  [According](https://github.com/kubernetes/kops/blob/master/docs/getting_started/aws.md) to `kops`  our user will require the following IAM permissions to function properly:
@@ -84,14 +88,15 @@ AmazonEventBridgeFullAccess
 ```
 
 you can search through the AWS permission list and select what you need.
-![[Screen Shot 2022-03-07 at 7.39.40 PM.png]]
+
+![AWS Permission List](/screenshots/Screen%20Shot%202022-03-07%20at%207.39.40%20PM.png)
 
 e. Click through tags and you should be at the review screen with this:
-![[../images/Screen Shot 2022-03-07 at 7.43.31 PM.png]]
+![AWS Review](/screenshots/Screen%20Shot%202022-03-07%20at%207.43.31%20PM.png)
 
 f. You should now have an AWS Access Key and Secret Key
 
-![[Screen Shot 2022-03-07 at 7.44.48 PM.png]]
+![AWS Keys](/screenshots/Screen%20Shot%202022-03-07%20at%207.44.48%20PM.png)
 
 g. Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
@@ -133,10 +138,9 @@ a. Create the S3 bucket using `aws s3 mb s3://[YOUR_BUCKET_NAME]`
     
 b. Since we are going to use this to store our cluster state,  you need to export this variable. 
 `export KOPS_STATE_STORE=s3://[YOUR_BUCKET_NAME]` 
-> Note: 
+
+> Note: Make sure the bucket you created is what you use in the state store variable.
     
-
-
 
  #### Step 4: Deploy the cluster.
 
