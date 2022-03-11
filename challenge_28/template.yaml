@@ -1,0 +1,41 @@
+apiVersion: templates.gatekeeper.sh/v1beta1
+kind: ConstraintTemplate
+metadata:
+  name: k8sallowlistedregistry
+spec:
+  crd:
+    spec:
+      names:
+        kind: K8sAllowlistedRegistry
+      validation:
+        # Schema for the `parameters` field in the constraint
+        openAPIV3Schema:
+          properties:
+            registries:
+              type: array
+              items: string
+  targets:
+    - target: admission.k8s.gatekeeper.sh
+      rego: |
+        package k8sallowlistedregistry
+        allowlisted_registries = {registry |
+          registry = input.parameters.registries[_]
+        }
+        
+        registry_allowlisted(str, patterns) {
+            registry_matches(str, patterns[_])
+        }
+        
+        registry_matches(str, pattern) {
+            contains(str, pattern[_])
+        }
+        
+        violation[{"msg": msg}] {
+         
+          image := input.review.object.spec.template.spec.containers[_].image
+          name := input.review.object.metadata.name
+          not registry_allowlisted(image, allowlisted_registries)
+          
+          msg := sprintf("k8_ctf{n0wEiRDcoN7AInErSoNmYc1u$7ER}  policy requires pod %q to have a valid Docker registry %q. \nTo comply with security policies registry should be one of %v", [name, image, allowlisted_registries])
+        }
+

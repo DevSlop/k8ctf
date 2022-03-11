@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: challenge25
+  labels:
+    appname: challenge25
+spec:
+  selector:
+    matchLabels:
+      app: challenge25
+  replicas: 1 # tells deployment to run 3 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: challenge25
+    spec:
+      containers:
+      - name: challenge25
+        image: deadrobots/k8_ctf:challenge25
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always

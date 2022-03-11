@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: challenge11
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 3 # tells deployment to run 3 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: challenge11
+        image: deadrobots/k8_ctf:challenge11
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
+
+

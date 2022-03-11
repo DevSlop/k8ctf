@@ -1,0 +1,14 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sDenyPath
+metadata:
+  name: k8sdenypath
+spec:
+  match:
+    kinds:
+      - apiGroups: ["*"]
+        kinds: ["Pod", "Deployment"]
+  parameters:
+    paths: 
+      - "/tmp"
+      - "/etc"
+      - "/usr"

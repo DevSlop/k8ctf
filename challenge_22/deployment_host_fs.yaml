@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: challenge19-lb
+  labels:
+    appname: challenge19
+    appid: "123"
+    zone: useast
+    environment: dev
+spec:
+  type: LoadBalancer
+  selector:
+    app: challenge19
+  ports:
+  - port: 80
+    targetPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: challenge19
+  labels:
+    appname: challenge19
+    appid: "123"
+    zone: useast
+    environment: dev
+spec:
+  selector:
+    matchLabels:
+      app: challenge19
+  replicas: 3 # tells deployment to run 3 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: challenge19
+    spec:
+      containers:
+      - name: challenge19
+        image: deadrobots/k8_ctf:challenge19
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
+        volumeMounts:
+        - mountPath: /k8-host
+          name: test-volume
+      volumes:
+      - name: test-volume
+        hostPath:
+          # directory location on host
+          path: /
+          # this field is optional
+          type: Directory
+

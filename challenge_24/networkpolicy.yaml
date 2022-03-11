@@ -1,0 +1,15 @@
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: admin-restrict
+  namespace: admin
+spec:
+  endpointSelector: {}
+  ingress:
+    - fromEndpoints:
+        - {}
+      toPorts:
+        - ports:
+            - port: "27017"
+        - ports:
+            - port: "28017"

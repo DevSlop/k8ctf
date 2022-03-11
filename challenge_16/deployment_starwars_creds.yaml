@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: challenge16-lb
+  labels:
+    app: challenge16
+spec:
+  type: LoadBalancer
+  selector:
+    app:  challenge16
+  ports:
+  - port: 80
+    targetPort: 3000
+ 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: challenge16
+spec:
+  selector:
+    matchLabels:
+      app: challenge16
+  replicas: 3 # tells deployment to run 3 pods matching the template
+  minReadySeconds: 300
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: challenge16
+    spec:
+      containers:
+      - name: challenge16
+        image: deadrobots/k8_ctf:challenge16
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Always
+
