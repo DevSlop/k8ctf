@@ -2,6 +2,8 @@ This workshop/CTF is part of the [OWASP DevSlop](https://www.devslop.co) project
 
 Big shout out to the Kops team. Without Kops this would have made individualized Kubnernetes clusters near impossible to be both low cost and light weight.
 
+Start by going to the [Start_Here.md](https://github.com/DevSlop/k8ctf/blob/master/Start_here.md)
+
 | Challenge     | Description   | Type  |
 | ---------     | -----------   | ----  |
 | Challenge 01 | K8 Overview - History of Virutalization | Learner |
