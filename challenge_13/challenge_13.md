@@ -1,4 +1,4 @@
-### **Challenge 13 - LoadBalancer**
+# Challenge 13 - K8 Networking - LoadBalancer
 
 **Challenge Type:** Builder
 
@@ -45,7 +45,7 @@ challenge13   LoadBalancer   10.152.183.13   a5bfe76ee236949bab3a0edb8ac6fd18-23
 
 5. Using your browser type in the IP of the AWS Load balancer
 
-![[Screen Shot 2022-03-09 at 9.59.24 PM.png]]
+![Load balancer](/screenshots/Screen%20Shot%202022-03-09%20at%209.59.24%20PM.png)
 
 > 🏁 Challenge 13 Flag - `k8_ctf{LoADbAlaNCERSfe3LSE3n}`
 

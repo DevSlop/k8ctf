@@ -1,4 +1,4 @@
-###  Challenge 29 - OPA Rules to restrict image origin
+#  Challenge 29 - K8 Security - OPA to Enforce Trusted Image Sources	
 
 **Challenge Type:** Builder
 

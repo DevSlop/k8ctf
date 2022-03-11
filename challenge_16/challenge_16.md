@@ -1,4 +1,4 @@
-## Challenge 16 - Finding Creds in Code
+# Challenge 16 - K8 Security - Finding Creds in Code	
 
 **Challenge Type:** Breaker
 
@@ -16,7 +16,7 @@ kubectl get svc
 ```
 
 Browsing to it is a web app that produces a random starwars quote every time you refresh the page. 
-![[Screen Shot 2022-03-09 at 10.24.52 PM.png]]
+![starwars](/screenshots/Screen%20Shot%202022-03-09%20at%2010.24.52%20PM.png)
 
 Lets go into a pod and browse through the code to find a credential in the deployment.
 
@@ -31,7 +31,7 @@ kubectl exec -it [PODNAME] -- bash
 cat index.js
 ```
 
-![[Pasted image 20220309221741.png]]
+![credentials](/screenshots/Pasted%20image%2020220309221741.png)
 
 
 Challenge is the credential.
@@ -40,14 +40,12 @@ Challenge is the credential.
 
 
 
-Exit
-
 ```json
+//exit
 exit
 ```
 
-
-no clean up yet
-```
+```json
+// clean up deployment
 kubectl delete -f challenge16/deployment_starwars_creds.yaml
 ```

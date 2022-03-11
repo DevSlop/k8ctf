@@ -1,4 +1,4 @@
-## Challenge 7
+# Challenge 7 - K8 Setup - Logging into Kubernetes	
 
 **Challenge Type:** Builder
 

@@ -1,4 +1,4 @@
-### Challenge 24 - Protecting from cross container access
+# Challenge 24 - 	K8 Security - Prevent Namespace Bypass w/ Cilium
 
 **Challenge Type:** Builder
 
@@ -36,8 +36,7 @@ We can visualize this here.
 
 We want to create a network policy that disables access from anywhere in the cluster to port 27017,28017.
 
-![[Pasted image 20220310213735.png]]
-
+![cilium](/screenshots/Pasted%20image%2020220310213735.png)
 Once you have your policy, apply it to the cluster
 
 ```json

@@ -1,5 +1,4 @@
-## Challenge 8
-
+# Challenge 8 - K8 Setup - Using `kubectl	`
 
 **Challenge Type:** Builder
 

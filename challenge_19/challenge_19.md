@@ -1,5 +1,5 @@
 
-## Challenge 19 - Finding / Fixing SSRF in K8
+# Challenge 19 - K8 Security - Finding SSRF bugs with Semgrep	
 
 **Challenge Type:** Builder
 
@@ -27,8 +27,7 @@ Windows installation requires WSL, which may add additional complexity. You can 
 semgrep --config "p/nodejsscan" index.js
 ```
 
-![[Pasted image 20220309224229.png]]
-
+![semgrep](/screenshots/Pasted%20image%2020220309224229.png)
 OR
 
 We can use the Semgrep Playground
@@ -39,7 +38,7 @@ We can use the Semgrep Playground
 
 We can do a few things to fix this, we can use IMDSv2 or ensure a specific HTTP header is present, or add NetworkPolicies to restrict `169.254.169.254` ip's. Those are all infrastructure configurations, how do we fix this code? if we need to really render untrusted URL's we should have the user's browser do it. So instead of the server rendering the URL, we should embed it in an `<iframe>` for the browser to render.
 
-!![[Pasted image 20220309224302.png]]
+![semgrep2](/screenshots/Pasted%20image%2020220309224302.png)
 
 Flag is buried in the code
 

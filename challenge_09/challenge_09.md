@@ -1,4 +1,4 @@
-## Challenge 9
+# Challenge 9 - K8 Setup - Kubernetes AuthN/AuthZ Overview	
 
 **Challenge Type:** Learner
 

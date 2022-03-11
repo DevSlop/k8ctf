@@ -1,4 +1,4 @@
-### Challenge 14 - Simple Deployment
+# Challenge 14 - K8 Deployment - Simple Deployment
 
 **Challenge Type:** Builder
 
@@ -24,7 +24,8 @@ go to the load balancer url / ip.
 
 we gotta update and expand! Next challenge
 
-![[Screen Shot 2022-03-09 at 10.06.11 PM.png]]
+![load balancer](/screenshots/Screen%20Shot%202022-03-09%20at%2010.06.11%20PM.png)
+
 
 > 🏁 Challenge 14 Flag - `k8_ctf{bl0s50m1n9dEPLOymen7}`
 

@@ -1,4 +1,4 @@
-### Challenge 29 - Running Kube-Bench
+# Challenge 29 - 	K8 Security - Using Kube-Bench
 
 **Challenge Type:** Builder
 

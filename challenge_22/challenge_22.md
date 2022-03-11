@@ -1,4 +1,6 @@
-### Challenge 22 - Write OPA policy to fix host file system access
+# Challenge 22 - K8 Security - OPA to Restrict Host Access
+
+**Challenge Type:** Builder
 
 Install OPA
 Go into challenge 22 folder
@@ -22,13 +24,13 @@ then apply a deployment
 kubectl apply -f deployment_host_fs.yaml
 ```
 
-![[Pasted image 20220309225311.png]]
-
+![opa](/screenshots/Pasted%20image%2020220309225311.png)
 > 🏁 Challenge 22 Flag - `k8_ctf{poliCyB10cKD3n13D}`
 
 
-cleanup
+
 
 ```json
+//challenge cleanup
 kubectl delete -f deployment_host_fs.yaml
 ```

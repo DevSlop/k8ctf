@@ -1,4 +1,4 @@
-## Challenge 21 - What is Open Policy Agent
+# Challenge 21 - K8 Security - Intro to OpenPolicyAgent
 
 **Challenge Type:** Learner
 

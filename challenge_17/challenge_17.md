@@ -1,4 +1,4 @@
-### Challenge 17- Fixing Secrets in Code
+# Challenge 17 - K8 Security - Using Kube Secrets
 
 **Challenge Type:** Builder
 
@@ -13,7 +13,7 @@ In this exercise we will use kube secrets to remove the username / password from
 
 ```json
 // Deploy the challenge
-kubectl apply -f deployment_starwars_secrets.yaml
+kubectl apply -f challenge_17/deployment_starwars_secrets.yaml
 
 // get the IP of the service
 kubectl get service
@@ -22,7 +22,7 @@ kubectl get service
 Browse to the loadbalancer ip and ee see that the database is having an authentication error because our user:password is 'undefined'
 
 
-![[Screen Shot 2022-03-09 at 10.28.29 PM.png]]
+![auth error](/screenshots/Screen%20Shot%202022-03-09%20at%2010.28.29%20PM.png)
 
 
 To fix this, we need to create a `starwars_secrets.yaml` file so that our deployment can pull the username / password from kube secrets. We know the user name and password from the previous challenge.
@@ -64,7 +64,7 @@ Refresh the page and you should see the flag.  be patient its a rollout restart!
 cleanup
 
 ```json
-kubectl delete -f deployment_starwars_secrets.yaml
+kubectl delete -f challenge_17/deployment_starwars_secrets.yaml
 ```
 
 <aside> 🚨 DON'T DELETE THE SECRET

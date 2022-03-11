@@ -1,4 +1,4 @@
-## Challenge 6
+# Challenge 6 - K8 Overview - Kubernetes Objects & Organization	
 
 **Challenge Type:** Learner
 

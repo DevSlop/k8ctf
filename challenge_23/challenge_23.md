@@ -1,4 +1,7 @@
-## Challenge 23 Namespace Bypasss
+# Challenge 23 - K8 Security - Namespace Bypass
+
+**Challenge Type:** Breaker
+
 
 There is a hidden namespace which has a running mongodb instance. The goal is to find the instance and find the flag.
 
@@ -26,7 +29,7 @@ kubectl exec -it challenge23-attacker-8bd985cb5-lk6dt -- bash
 ifconfig
 ```
 
-![[Pasted image 20220309225621.png]]
+![namespace](/screenshots/Pasted%20image%2020220309225621.png)
 
 4.  Lets trigger an nmap scan. We know from a previous challenge mongodb is the db of choice, lets look up its ports to find where mongo is.
 
@@ -85,8 +88,7 @@ admin                  challenge23-65497d5f55-z2sml                            1
 default                challenge23-attacker-56dd74986d-82ncz                   1/1     
 ```
 
-![[Pasted image 20220309225646.png]]
-
+![ns](/screenshots/Pasted%20image%2020220309225646.png)
 > 🏁 Challenge 23 Flag - `k8_ctf{FouNdY0Ur4dminN4mESpAcE}`
 
 

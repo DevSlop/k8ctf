@@ -1,4 +1,4 @@
-## Challenge 20 - Escaping the container and accessing host fs.
+## Challenge 20 - K8 Security - Container Escape to Host
 
 **Challenge Type:** Breaker
 
@@ -24,7 +24,7 @@ root@challenge11-b6c789695-mgqkg:/# ls
 bin  boot  dev  etc  home  k8-host  lib  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 ```
 
-![[Pasted image 20220309224654.png]]
+![escape](/screenshots/Pasted%20image%2020220309224654.png)
 
 ```json
 // lets cd into the /k8-host directory
@@ -40,14 +40,14 @@ we can now pull the certificates for the cluster.
 cat /var/lib/kubelet/kubeconfig
 ```
 
-![[Pasted image 20220309224800.png]]
+![escape2](/screenshots/Pasted%20image%2020220309224800.png)
 
 ```json
 ls
 cat flag
 ```
 
-![[Pasted image 20220309224818.png]]
+![escape3](/screenshots/Pasted%20image%2020220309224818.png)
 
 > 🏁 Challenge 20 Flag - `k8_ctf{esc4pIN9coNT41NeR5}`
 

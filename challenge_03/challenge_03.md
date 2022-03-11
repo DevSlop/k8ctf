@@ -1,4 +1,4 @@
-## Challenge 3
+# Challenge 3 - K8 Overview - What is Orchestration?
 
 **Challenge Type:** Learner
 

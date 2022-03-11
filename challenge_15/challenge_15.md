@@ -1,4 +1,4 @@
-### Challenge 15 - Updating Deployments
+# Challenge 15 - K8 Deployment - Rolling Updates
 
 **Challenge Type:** Builder
 
@@ -22,7 +22,7 @@ challenge15-56f7765d8b-xqlsm   1/1     Running   0          4m2s
 Let's apply our updated image with more replicas
 
 ```json
-kubectl apply -f 2-deployment_rolling_update_image.yaml
+kubectl apply -f challenge_15/2-deployment_rolling_update_image.yaml
 ```
 
 We see we have 6 pods, 3 are starting.
@@ -61,7 +61,7 @@ challenge15-799d9d4cf7-nkrn7   1/1     Running   0          69s
 now go refresh the webpage. 
 
 thats the flag! we just did a rolling update to refresh the container images on all our running pods and expanded them to 6
-![[Screen Shot 2022-03-09 at 10.10.07 PM.png]]
+![rolling](/screenshots/Screen%20Shot%202022-03-09%20at%2010.10.07%20PM.png)
 
 > 🏁 Challenge 15 Flag - `k8_ctf{E@5y8reEzYuPD@T1NG}`
 
@@ -70,5 +70,5 @@ thats the flag! we just did a rolling update to refresh the container images on 
 cleanup
 
 ```json
-kubectl delete -f 2-deployment_rolling_update_image.yaml
+kubectl delete -f challenge_15/2-deployment_rolling_update_image.yaml
 ```

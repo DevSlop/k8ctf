@@ -1,4 +1,4 @@
-### Challenge 12 -  K8 Networking - NodePort
+# Challenge 12 -  K8 Networking - NodePort
 
 **Challenge Type:** Builder
 
