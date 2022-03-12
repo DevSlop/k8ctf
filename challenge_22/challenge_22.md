@@ -54,7 +54,7 @@ then apply a deployment
 kubectl apply -f deployment_host_fs.yaml
 ```
 
-![opa](/screenshots/Pasted%20image%2020220309225311.png)
+![opa](/screenshots/Screen%20Shot%202022-03-11%20at%208.09.48%20PM.png)
 > 🏁 Challenge 22 Flag - `k8_ctf{poliCyB10cKD3n13D}`
 
 
