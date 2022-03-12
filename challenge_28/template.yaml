@@ -39,3 +39,7 @@ spec:
           msg := sprintf("k8_ctf{n0wEiRDcoN7AInErSoNmYc1u$7ER}  policy requires pod %q to have a valid Docker registry %q. \nTo comply with security policies registry should be one of %v", [name, image, allowlisted_registries])
         }
 
+        registry = 
+          [
+            "gcr.io"
+          ]
