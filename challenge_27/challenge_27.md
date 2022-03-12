@@ -1,4 +1,4 @@
-# Challenge 28 - K8 Security - Scanning Containers for Vulnerabilities	
+# Challenge 27 - K8 Security - Scanning Containers for Vulnerabilities	
 
 **Challenge Type:** Breaker
 

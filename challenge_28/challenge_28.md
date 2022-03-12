@@ -1,4 +1,4 @@
-#  Challenge 29 - K8 Security - OPA to Enforce Trusted Image Sources	
+#  Challenge 28- K8 Security - OPA to Enforce Trusted Image Sources	
 
 **Challenge Type:** Builder
 

@@ -37,7 +37,7 @@ Most of this CTF was built by [@thedeadrobots](https://twitter.com/thedeadrobots
 | [Challenge 23](https://github.com/DevSlop/k8ctf/blob/master/challenge_23/challenge_23.md) | K8 Security - Namespace Bypass | Breaker |
 | [Challenge 24](https://github.com/DevSlop/k8ctf/blob/master/challenge_24/challenge_24.md) | K8 Security - Prevent Namespace Bypass w/ Cilium | Builder |
 | [Challenge 25](https://github.com/DevSlop/k8ctf/blob/master/challenge_25/challenge_25.md) | K8 Security - Consume Cluster Resources / DoS | Breaker |
-| [Challenge 26](https://github.com/DevSlop/k8ctf/blob/master/challenge_26/challenge_26.md_) | K8 Security - OPA to Enforce Resource Limits | Builder |
+| [Challenge 26](https://github.com/DevSlop/k8ctf/blob/master/challenge_26/challenge_26.md) | K8 Security - OPA to Enforce Resource Limits | Builder |
 | [Challenge 27](https://github.com/DevSlop/k8ctf/blob/master/challenge_27/challenge_27.md) | K8 Security - Scanning Containers for Vulnerabilities | Breaker |
 | [Challenge 28](https://github.com/DevSlop/k8ctf/blob/master/challenge_28/challenge_28.md) | K8 Security - OPA to Enforce Trusted Image Sources | Builder |
 | [Challenge 29](https://github.com/DevSlop/k8ctf/blob/master/challenge_29/challenge_29.md) | K8 Security - Using Kube-Bench | Builder |

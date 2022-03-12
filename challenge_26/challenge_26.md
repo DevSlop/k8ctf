@@ -1,4 +1,4 @@
-# Challenge 26 - 	K8 Security - OPA to Enforce Resource Limits
+# Challenge 26 - K8 Security - OPA to Enforce Resource Limits
 
 How do we prevent run away processes that can DOS CPU/Memory?
 
