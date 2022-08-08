@@ -1,4 +1,4 @@
-# Challenge 1 - K8 Overview - History of Virutalization
+# Challenge 1 - K8 Overview - History of Virtualization
 
 **Challenge Type:** Learner
 
